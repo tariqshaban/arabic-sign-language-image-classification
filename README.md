@@ -75,9 +75,9 @@ Methodology
 >
 > --------
 >
-> The following is a table denotes the classes of the dataset (sorted alphabetically based on the ClassAr column)
+> The following is a table denotes the classes of the dataset (sorted alphabetically based on the ClassAr column).
 >
-> Note that a total of 32 classes can be observed from the table
+> Note that a total of 32 classes can be observed from the table.
 >
 > | ClassId | Class | ClassAr |
 > |:-------:|:-----:|:-------:|
@@ -114,12 +114,12 @@ Methodology
 > |  28    |  waw  |   واو   |
 > |  30    |  yaa  |   ياء   |
 >
-> The figure below displays an image from each class
+> The figure below displays an image from each class:
 >
 > ![image_samples.png](assets/images/preprocessing/image_samples.png)
 >
 > The image displays how well the classes are balanced, note that `(ain) عين` has approximately 700 more images
-> than `(yaa) ياء`
+> than `(yaa) ياء`.
 >
 > ![class_distribution.png](assets/images/preprocessing/class_distribution.png)
 
@@ -127,7 +127,7 @@ Methodology
 >
 > --------
 >
-> * No significant image processing techniques have been carried out.
+> * No significant image processing techniques have been carried out
 > * All images have the same size (64x64x3)
 > * Image rescaling technique has been used (pixel normalization)
 >
@@ -151,7 +151,7 @@ Methodology
 >   * Convolutional neural network (CNN)
 >   * Convolutional neural network (CNN) using a pretrained model
 >
-> The following images display the affect of each network size on the architecture of each neural network
+> The following images display the affect of each network size on the architecture of each neural network:
 >
 > <table>
 >    <tr>
@@ -657,7 +657,7 @@ Findings
 > ![accuracy.png](assets/images/findings/accuracy.png)
 >
 > Notice that the accuracy converged rapidly, and stabilized at approximately the 20ᵗʰ epoch, this indicates that the
-> number of epochs is sufficient for this given model
+> number of epochs is sufficient for this given model.
 >
 > ![loss.png](assets/images/findings/loss.png)
 >
@@ -666,10 +666,7 @@ Findings
 > ![confusion.png](assets/images/findings/confusion.png)
 >
 > Based on the confusion matrix, the model was effective in discriminating between Arabic letters represented by sign
-> langauge, almost all the test set entries reside on the diagonal
->
-> Based on the confusion matrix, the model was effective in discriminating between Arabic letters represented by the
-> sign language, almost all of the test set entries reside on the diagonal
+> language, almost all the test set entries reside on the diagonal.
 
 Assignment Related Questions
 ------------
@@ -689,7 +686,7 @@ Assignment Related Questions
 > --------
 >
 > The impact of each activation function cannot be easily determined, several variables can affect the behaviour of the
-> activation function
+> activation function.
 >
 > * Sigmoid: 
 >   * Computationally expensive
@@ -723,12 +720,26 @@ Assignment Related Questions
 > --------
 > 
 > Similarly to the previous question, the impact cannot be generalized, since the parameters of the optimizer can affect
-> its behaviour
+> its behaviour.
 >  
 > Observations:
 > * RMSProp and Adam obtained higher results than SGD in many cases
 > * SGD takes longer time to converge, note that the learning rate default value for the SGD is ten higher than RMSProp
 >   and Adam
+
+> #### Assess the impact of the neural network depth on the accuracy, loss
+>
+> --------
+> 
+> While it seems from intuition that deeper neural networks should yield better results, it can cause, in some cases,
+> the exact opposite effect. It may result in overfitting; making the test accuracy high but low on unseen data (such as
+> validation and test sets). In addition, it may unnecessarily increase the number of parameters, which
+> subsequently, increases the computational requirement.
+>  
+> Observations:
+> * Deeper networks provide better results, but they can have a negative effect in some cases
+> * Deeper networks can exhaust resources exponentially, especially the memory
+> * Deeper networks should not be used to solve simple problems, this will cause the model to overfit
 
 > #### Identify the factor which contributes to the model's overfitting
 >
@@ -748,7 +759,7 @@ Notes
 
 * Surprisingly, some fully connected networks achieved relatively acceptable results, this can be caused by the number
   of parameters for the image (64x64x3), FCNN is known to be a poor option when used solely on image problems; because
-  unlike CNN, it lacks image feature extraction.
+  unlike CNN, it lacks image feature extraction
 * Transfer learning expedites the convergence, making it possible to achieve satisfactory results with only one digit
   epochs
 
